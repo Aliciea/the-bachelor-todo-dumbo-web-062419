@@ -6,6 +6,10 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
+  data.values
+      .flatten
+      .find { |person| person[:occupation] == occupation}
+      &.dig(:name)
 end
 
 def count_contestants_by_hometown(data, hometown)
