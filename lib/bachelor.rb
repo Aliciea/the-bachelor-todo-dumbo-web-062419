@@ -1,10 +1,10 @@
 def get_first_name_of_season_winner(data, season)
   # code here
-  winner = nil
-  data[season.to_sym].each do |contestant|
-    contestant.each do |title, info|
-      if info == "Winner"
-        winner = contestant[:"name"].split(" ").first
+  winner = 0 
+  data[season.to_sym].each do |name|
+    name.each do |first_name|
+      if first_name == "Winner"
+        winner = first_name.split(" ").first
       end
     end
   end
